@@ -1,0 +1,16 @@
+SET SERVEROUTPUT ON
+DECLARE 
+   num1 number := 12;
+   num2 number := 22;
+   num3 number;
+BEGIN 
+   num3 := num1 + num2 ;
+   dbms_output.put_line('The Addition of '||num1||' and '||num2 || ' is : '|| num3); 
+   num3 := num2 - num1 ;
+   dbms_output.put_line('The Subtraction of '||num1||' and '||num2 || ' is : '|| num3); 
+   num3 := num1 * num2 ;
+   dbms_output.put_line('The Multiplication of '||num1||' and '||num2 || ' is : '|| num3); 
+   num3 := num2 / num1 ;
+   dbms_output.put_line('The Division of '||num1||' and '||num2 || ' is : '|| num3); 
+END; 
+/ 
