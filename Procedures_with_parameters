@@ -1,0 +1,34 @@
+-- IN , OUT PARAMETERS
+SET SERVEROUTPUT ON;
+DECLARE 
+	A NUMBER;
+	R NUMBER;
+PROCEDURE SQUARE (X IN NUMBER,Z OUT NUMBER)
+IS 
+BEGIN
+	Z := X * X ;
+END;
+
+BEGIN
+	A := 10;
+	SQUARE(A,R);
+	DBMS_OUTPUT.PUT_LINE('SQUARE OF '||A||' IS: '|| R );
+END;
+/
+--------------------------------------------------------------------------------------------------------------------------------------------------
+--BOTH IN & OUT PARAMETER
+SET SERVEROUTPUT ON;
+DECLARE 
+	A NUMBER;
+PROCEDURE SQUARE (X IN OUT NUMBER)
+IS 
+BEGIN
+	X := X * X ;
+END;
+
+BEGIN
+	A := 10;
+	SQUARE(A);
+	DBMS_OUTPUT.PUT_LINE('SQUARE OF IS: '|| A );
+END;
+/
